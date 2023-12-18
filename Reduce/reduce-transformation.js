@@ -21,6 +21,7 @@ var reduce = function(nums, fn, init) {
 counter =  fn(counter, num) 
 
   }
-  
+
   return counter
     }
+
