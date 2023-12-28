@@ -1,0 +1,24 @@
+// In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+
+// If anything in the text isn't a letter, ignore it and don't return it.
+
+// "a" = 1, "b" = 2, etc.
+
+function alphabetPosition(text) {
+  
+  let str = text.toLowerCase()
+
+  let regex = /[a-z]/gi
+  
+  let filterStr = str.match(regex)
+  
+let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+  
+  if(filterStr === null){
+    return ""
+  }
+  let numPosition = filterStr.map((word)=> alphabet.indexOf(word) + 1  )
+  
+  return numPosition.join(" ")
+ 
+}
