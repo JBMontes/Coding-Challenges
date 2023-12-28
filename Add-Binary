@@ -28,5 +28,4 @@ var addBinary = function(a, b) {
 
     return sum.toString(2);
 
-
 };
