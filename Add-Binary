@@ -9,23 +9,20 @@
 // Input: a = "1010", b = "1011"
 // Output: "10101"
 
-
 /**
  * @param {string} a
  * @param {string} b
  * @return {string}
  */
-var addBinary = function(a, b) {
+var addBinary = function (a, b) {
+  // In this case, BigInt is used to create BigInt values directly from binary strings, ensuring accurate representation of large numbers.
 
-// In this case, BigInt is used to create BigInt values directly from binary strings, ensuring accurate representation of large numbers.
+  //The 0b prefix is a way to explicitly specify that the number is in binary form. It signals to the JavaScript interpreter that the following digits represent a binary number.
 
-//The 0b prefix is a way to explicitly specify that the number is in binary form. It signals to the JavaScript interpreter that the following digits represent a binary number.
+  let binA = BigInt("0b" + a);
+  let binB = BigInt("0b" + b);
 
-    let binA = BigInt('0b' + a);
-    let binB = BigInt('0b' + b);
+  let sum = binA + binB;
 
-    let sum = binA + binB;
-
-    return sum.toString(2);
-
+  return sum.toString(2);
 };

@@ -2,18 +2,15 @@
 
 // You must write an algorithm with O(log n) runtime complexity.
 
-
-
 /**
  * @param {number[]} nums
  * @param {number} target
  * @return {number}
  */
-var searchInsert = function(nums, target) {
+var searchInsert = function (nums, target) {
+  nums.push(target);
 
-    nums.push(target)
+  let sort = nums.sort((a, b) => a - b);
 
-    let sort = nums.sort((a,b)=> a-b)
-
-    return nums.indexOf(target)
-}
+  return nums.indexOf(target);
+};
