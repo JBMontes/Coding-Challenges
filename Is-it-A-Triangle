@@ -2,13 +2,10 @@
 
 // (In this case, all triangles must have surface greater than 0 to be accepted).
 
-function isTriangle(a,b,c)
-{
-  
-// Triangle Inequality Theorem
-if((a + b > c) && (a + c > b) && (b + c > a)){
-  return true
+function isTriangle(a, b, c) {
+  // Triangle Inequality Theorem
+  if (a + b > c && a + c > b && b + c > a) {
+    return true;
+  }
+  return false;
 }
-  return false
-}
-
