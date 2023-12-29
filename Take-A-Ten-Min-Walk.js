@@ -3,27 +3,23 @@
 // Note: you will always receive a valid array containing a random assortment of direction letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
 
 function isValidWalk(walk) {
-  
-    if(walk.length < 10){
-      return false
-    }else if(walk.length > 10){
-        return false
-      }else{
-      let obj = {}
-      for(let walks of walk){
-        if(!obj[walks]){
-          obj[walks] = 1
-        }else{
-          obj[walks] += 1
-        }
+  if (walk.length < 10) {
+    return false;
+  } else if (walk.length > 10) {
+    return false;
+  } else {
+    let obj = {};
+    for (let walks of walk) {
+      if (!obj[walks]) {
+        obj[walks] = 1;
+      } else {
+        obj[walks] += 1;
       }
-      if((obj["w"] !== obj["e"]) || (obj["n"] !== obj["s"] )){
-         return false
-         }
-      
-      return true
-      }
-    
     }
-    
-    
+    if (obj["w"] !== obj["e"] || obj["n"] !== obj["s"]) {
+      return false;
+    }
+
+    return true;
+  }
+}
