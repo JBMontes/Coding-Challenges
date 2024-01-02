@@ -1,0 +1,25 @@
+// In this kata you will be given a list consisting of unique elements except for one thing that appears twice.
+
+// Your task is to output a list of everything inbetween both occurrences of this element in the list.
+
+// Examples:
+// [0, 1, 2, 3, 4, 5, 6, 1, 7, 8] => [2, 3, 4, 5, 6]
+// ["None", "Hello", "Example", "hello", "None", "Extra"] => ["Hello", "Example", "hello"]
+// [0, 0] => []
+// [true, false, true] => [false]
+// "example" => "xampl"
+
+function duplicateSandwich(a) {
+  if (a.length < 1) {
+    return [];
+  }
+  let min;
+  let max;
+  for (let i = 0; i < a.length; i++) {
+    if (a.indexOf(a[i]) !== a.lastIndexOf(a[i])) {
+      min = a.indexOf(a[i]);
+      max = a.lastIndexOf(a[i]);
+    }
+  }
+  return a.slice(min + 1, max);
+}
