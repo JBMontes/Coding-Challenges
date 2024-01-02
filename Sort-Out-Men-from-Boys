@@ -1,0 +1,26 @@
+// Now that the competition gets tough it will Sort out the men from the boys .
+
+// Men are the Even numbers and Boys are the odd
+
+function menFromBoys(arr) {
+  let even = [];
+  let odd = [];
+  let final = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      even.push(arr[i]);
+    } else {
+      odd.push(arr[i]);
+    }
+  }
+  let evenSet = new Set(even);
+  let oddSet = new Set(odd);
+
+  let evenSort = Array.from(evenSet).sort((a, b) => a - b);
+  let oddSort = Array.from(oddSet).sort((a, b) => b - a);
+
+  final.push(...evenSort, ...oddSort);
+
+  return final;
+}
