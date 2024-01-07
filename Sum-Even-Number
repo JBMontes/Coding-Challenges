@@ -9,10 +9,9 @@
 // []                               -->  0
 
 function sumEvenNumbers(input) {
-  
-  if(input.length === 0){
-    return 0
+  if (input.length === 0) {
+    return 0;
   }
-let filt = input.filter((num)=> num % 2 === 0)
-return filt.reduce((a,b)=> a + b)
+  let filt = input.filter((num) => num % 2 === 0);
+  return filt.reduce((a, b) => a + b);
 }
