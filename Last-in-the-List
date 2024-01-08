@@ -6,9 +6,9 @@
 
 // In languages that do not have an empty option, just return null
 
-const last = xs => {
-if(xs.length === 0 ) return null
-  
- let last = xs.pop()
- return last
-}
+const last = (xs) => {
+  if (xs.length === 0) return null;
+
+  let last = xs.pop();
+  return last;
+};
