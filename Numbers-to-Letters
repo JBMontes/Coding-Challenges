@@ -1,0 +1,19 @@
+// Given an array of numbers (in string format), you must return a string. The numbers correspond to the letters of the alphabet in reverse order: a=26, z=1 etc. You should also account for '!', '?' and ' ' that are represented by '27', '28' and '29' respectively.
+
+// All inputs will be valid.
+
+function switcher(x){
+    // create an array of alphabet and symbols;
+    // iterate over the parameter array;
+    // reverse the order of the alphabet array depending on how you wrote it;
+    //add the reverse[num] to the str 
+    //retrun string
+  let alphabet = [" ","?","!","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",'']
+  let reverse = alphabet.slice().reverse()
+  let str = ""
+  
+  for(let num of x){
+   str += reverse[num]
+ }
+return str
+  }
